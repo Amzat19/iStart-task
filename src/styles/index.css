@@ -1,7 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Work Sans', sans-serif;
   line-height: 1.5;
   font-size: 16px;
+  --font-color: black;
+  --background-color: #FAFBFC;
+  --authBoxBg: #F8F9FB;
+  --authElemBg: white;
+  --googleSignBg: white;
+  --googleSignBorder: #DAE0E6;
+  --activeAuth: #437EF7;
+  --authBg: white;
+}
+
+[data-theme="dark"] {
+  --font-color: white;
+  --background-color: #18191A;
+  --authBoxBg: #3A3B3C;
+  --authElemBg: black;
+  --googleSignBg: #E4E6EB;
+  --inputBg: #3A3B3C;
+  --activeAuth: white;
+  --authBg: #242526;
 }
 
 * {
@@ -11,6 +32,7 @@
 }
 
 body {
+  background-color: var(--background-color);
   height: 100vh;
   width: 100vw;
 }
