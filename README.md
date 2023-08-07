@@ -19,21 +19,18 @@ Follow these steps to set up and run the project:
 
 To get started, you will need to clone the repository to your local machine. You can do this by running the following command in your terminal:
 
-
+```sh
 git clone https://github.com/Amzat19/iStart-task.git
-​
-
-
+```
 This will create a new directory called `iStart-task` in your current working directory.
 
 ### Step 2: Install dependencies
 
 Once you have cloned the repository, you will need to install the dependencies. You can do this by running the following command in your terminal:
 
-
+```sh
 npm install
-​
-
+```
 
 This will install all of the necessary packages required to run the project.
 
@@ -41,8 +38,9 @@ This will install all of the necessary packages required to run the project.
 
 To start the development server, you can run the following command in your terminal:
 
-
+```sh
 npm run dev
+```
 ​
 
 
