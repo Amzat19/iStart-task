@@ -23,11 +23,13 @@ Follow these steps to set up and run the project:
 
 2. Install dependencies:
   ```sh
-    npm install
+  npm install
 
 3. Start the development server:
   ```sh
-    npm run dev
+  npm run dev
+
+4. Open http://localhost:5173 in your browser.
 
 ## Technologies
 
