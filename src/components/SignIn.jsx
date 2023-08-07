@@ -32,7 +32,7 @@ const Signin = () => {
                 const parsedUser = JSON.parse(storedUser);
 
                 if (parsedUser.email === signInDetails.email && parsedUser.password === signInDetails.password) {
-                    navigate('/dashboard');
+                    navigate('/dashboard/overview');
                 } else {
                     setErrMessage('Invalid credentials');
                 }

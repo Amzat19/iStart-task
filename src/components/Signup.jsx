@@ -41,7 +41,7 @@ const SignUp = () => {
         localStorage.setItem('user', JSON.stringify(user));
 
         // Redirect to the dashboard after successful sign-up
-        navigate('/dashboard');
+        navigate('/dashboard/overview');
     };
 
     return (

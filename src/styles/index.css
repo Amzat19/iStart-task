@@ -12,6 +12,12 @@
   --googleSignBorder: #DAE0E6;
   --activeAuth: #437EF7;
   --authBg: white;
+  --header-text: black;
+  --fill-menu: #272D37;
+  --board-text: #5F6D7E;
+  --list-boardBg: rgba(235, 239, 243, 0.60);
+  --todoTagBg: white;
+  --todoTagBorder: #DAE0E6;
 }
 
 [data-theme="dark"] {
@@ -23,6 +29,12 @@
   --inputBg: #3A3B3C;
   --activeAuth: white;
   --authBg: #242526;
+  --header-text: #E4E6EB;
+  --fill-menu: #B0B3B8;
+  --board-text: #E4E6EB;
+  --list-boardBg: #3A3B3C;
+  --todoTagBg: #242526;
+  --todoTagBorder: #3A3B3C; 
 }
 
 * {
