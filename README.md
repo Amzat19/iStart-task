@@ -18,13 +18,15 @@ Follow these steps to set up and run the project:
 1. Clone the repository:
 
    ```sh
-   git clone <repository_url>
-   cd task-management-app
+   git clone https://github.com/Amzat19/iStart-task.git
+   cd iStart-task
 
 2. Install dependencies:
+  ```sh
     npm install
 
 3. Start the development server:
+  ```sh
     npm run dev
 
 ## Technologies
