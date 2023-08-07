@@ -5,7 +5,7 @@ export const SigninLayout = () => {
     const outlet = useOutlet();
 
     if (userString) {
-        return <Navigate to="/dashboard" replace />;
+        return <Navigate to="/dashboard/overview" replace />;
     }
 
     return (
