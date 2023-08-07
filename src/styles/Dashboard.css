@@ -470,6 +470,14 @@
         & main {
             position: relative;
 
+            & .header {
+                & .menu {
+                    & .menu-logo {
+                        display: none;
+                    }
+                }
+            }
+
             & section {
                 padding: 0 6.25rem;
             }
