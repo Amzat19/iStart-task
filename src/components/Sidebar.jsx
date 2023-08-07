@@ -12,16 +12,22 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router';
 
 const Sidebar = ({ activeSidebar, toggleSidebar }) => {
+    // State to keep track of the active page in the sidebar
     const [activePage, setActivePage] = useState('overview');
+
+    // Hook to navigate to different routes
     const navigate = useNavigate();
 
+    // Function to change the active page in the sidebar
     const changeActivePage = (page) => {
-        setActivePage(page)
+        // Update the activePage state
+        setActivePage(page);
 
+        // Navigate to the selected page route
         if (page === 'overview') {
-            navigate(`${page}`)
+            navigate(`${page}`);
         } else {
-            navigate(`construction`)
+            navigate(`construction`);
         }
     };
 

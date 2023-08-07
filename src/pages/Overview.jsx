@@ -18,9 +18,13 @@ import { useState } from 'react';
 
 const Overview = () => {
   const today = new Date();
+
+  // State for managing new task form and editing
   const [isNewTaskActive, setIsNewTaskActive] = useState(false);
   const [editingMode, setEditingMode] = useState(false);
   const [editingTaskIndex, setEditingTaskIndex] = useState(null);
+
+  // State for storing tasks
   const [tasks, setTasks] = useState([
     {
       taskName: 'Task Name',
@@ -30,6 +34,7 @@ const Overview = () => {
     }
   ]);
 
+  // State for new task
   const [newTask, setNewTask] = useState({
     taskName: '',
     description: '',
@@ -37,6 +42,7 @@ const Overview = () => {
     status: ''
   });
 
+  // Function to add or edit a task
   const addTask = () => {
     if (!newTask.taskName || !newTask.description || !newTask.date || !newTask.status) {
       return;
@@ -56,7 +62,7 @@ const Overview = () => {
       ]);
     }
 
-
+    // Clear the new task form
     setNewTask({
       taskName: '',
       description: '',
@@ -64,16 +70,18 @@ const Overview = () => {
       status: ''
     });
 
+    // Exit editing mode and toggle new task form
     setEditingMode(false);
     toggleNewTask();
   }
 
+  // Function to delete a task
   const handleDeleteTask = (index) => {
     const updatedTasks = tasks.filter((task, i) => i !== index);
     setTasks(updatedTasks);
   };
 
-
+  // Function to edit a task
   const handleEditTask = (index) => {
     const selectedTask = tasks[index];
     setNewTask(selectedTask);
@@ -82,6 +90,7 @@ const Overview = () => {
     toggleNewTask();
   };
 
+  // Function to update an existing task
   const editNewTask = (e) => {
     const { name, value } = e.target;
     setNewTask({
@@ -90,6 +99,7 @@ const Overview = () => {
     })
   };
 
+  // Function to toggle the new task form
   const toggleNewTask = () => {
     setIsNewTaskActive(!isNewTaskActive);
   }

@@ -6,7 +6,10 @@ import SignUp from '../components/Signup';
 import Signin from '../components/SignIn';
 
 const LoginOrSignUp = () => {
+    // Use the useDarkMode hook to get the toggleTheme function for theme switching
     const { toggleTheme } = useDarkMode();
+
+    // State to manage the signin component status
     const [isSignin, setIsSignin] = useState(true);
 
     return (

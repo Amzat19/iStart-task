@@ -10,13 +10,21 @@ import Sidebar from '../components/Sidebar';
 import { Outlet } from 'react-router';
 
 const Dashboard = () => {
+  // Use the useDarkMode hook to access theme toggling functionality
   const { toggleTheme } = useDarkMode();
+
+  // State to manage the visibility of the sidebar
   const [activeSidebar, setActiveSidebar] = useState(false);
+
+  // Retrieve the user's full name from local storage
   const { fullname } = JSON.parse(localStorage.getItem('user'));
+
+  // Get the current hour to determine the appropriate greeting
   const today = new Date();
   const currentHour = today.getHours();
   let greeting;
 
+  // Determine the greeting based on the current hour
   if (currentHour >= 5 && currentHour < 12) {
     greeting = 'Good Morning';
   } else if (currentHour >= 12 && currentHour < 18) {
@@ -25,9 +33,11 @@ const Dashboard = () => {
     greeting = 'Good Evening';
   }
 
+  // Function to toggle the visibility of the sidebar
   const toggleSidebar = () => {
-    setActiveSidebar(!activeSidebar)
+    setActiveSidebar(!activeSidebar);
   };
+
 
   return (
     <div className='dashboard'>
